@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#fafafa"/>
+<g font-family="Arial, sans-serif">
+<text x="70" y="78" font-size="28" font-weight="700" fill="#222">同一个 Agent，会话不同阶段走不同模型</text>
+<text x="70" y="112" font-size="16" fill="#666">Stage Router 用工具结果、错误和产出信号判断当前阶段</text>
+
+<rect x="70" y="215" width="210" height="210" rx="22" fill="#fff" stroke="#c5c8ca" stroke-width="1.5"/>
+<text x="100" y="255" font-size="18" font-weight="700" fill="#2a2a2a">当前一轮</text>
+<text x="100" y="300" font-size="15" fill="#555">读文件</text>
+<text x="100" y="335" font-size="15" fill="#555">工具报错</text>
+<text x="100" y="370" font-size="15" fill="#555">持续改文件</text>
+
+<path d="M300 320 H400" stroke="#7f9b99" stroke-width="2"/>
+<path d="M388 312 L400 320 L388 328" stroke="#7f9b99" stroke-width="2" fill="none"/>
+
+<rect x="420" y="180" width="340" height="280" rx="28" fill="#fff" stroke="#9ca5aa" stroke-width="1.8"/>
+<text x="455" y="225" font-size="20" font-weight="700" fill="#222">Stage Router</text>
+<rect x="455" y="255" width="270" height="52" rx="12" fill="#f4f5f6" stroke="#d3d6d8"/>
+<text x="480" y="287" font-size="15" fill="#333">探索 / 错误恢复 → capable</text>
+<rect x="455" y="325" width="270" height="52" rx="12" fill="#f4f5f6" stroke="#d3d6d8"/>
+<text x="480" y="357" font-size="15" fill="#333">稳定产出 → efficient</text>
+<text x="455" y="415" font-size="14" fill="#666">推荐阈值：confidence_threshold = 0.5</text>
+
+<path d="M780 260 H875" stroke="#7f9b99" stroke-width="2"/>
+<path d="M863 252 L875 260 L863 268" stroke="#7f9b99" stroke-width="2" fill="none"/>
+<path d="M780 380 H875" stroke="#7f9b99" stroke-width="2"/>
+<path d="M863 372 L875 380 L863 388" stroke="#7f9b99" stroke-width="2" fill="none"/>
+
+<rect x="900" y="190" width="230" height="120" rx="18" fill="#fff" stroke="#bfc3c7" stroke-width="1.5"/>
+<text x="930" y="235" font-size="18" font-weight="700" fill="#2a2a2a">Capable</text>
+<text x="930" y="270" font-size="14" fill="#666">难题 / 恢复 / 探索</text>
+<rect x="900" y="350" width="230" height="120" rx="18" fill="#fff" stroke="#bfc3c7" stroke-width="1.5"/>
+<text x="930" y="395" font-size="18" font-weight="700" fill="#2a2a2a">Efficient</text>
+<text x="930" y="430" font-size="14" fill="#666">机械执行 / 稳定阶段</text>
+
+<text x="70" y="565" font-size="17" font-weight="700" fill="#333">适合的成本控制方式</text>
+<text x="70" y="600" font-size="15" fill="#555">先定义一组高能力模型和一组高效率模型，再让路由按 Agent 当前阶段切换。</text>
+<text x="70" y="632" font-size="15" fill="#555">它不会自动保证“更便宜且同等质量”；阈值、模型对和任务集都需要自己校准。</text>
+</g>
+</svg>
