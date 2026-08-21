@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#fafafa"/>
+<text x="70" y="78" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#222">一条请求，换模型也不用改客户端</text>
+<text x="70" y="112" font-family="Arial, sans-serif" font-size="16" fill="#666">OpenAI / Anthropic 原生协议 → Switchyard 翻译与路由 → 不同模型后端</text>
+<g font-family="Arial, sans-serif">
+  <rect x="70" y="205" width="240" height="240" rx="22" fill="#fff" stroke="#bfc3c7" stroke-width="1.5"/>
+  <text x="100" y="250" font-size="18" font-weight="700" fill="#2a2a2a">客户端</text>
+  <rect x="100" y="280" width="180" height="44" rx="10" fill="#f4f5f6" stroke="#d6d8da"/>
+  <text x="120" y="308" font-size="15" fill="#444">Codex / Agent</text>
+  <rect x="100" y="340" width="180" height="44" rx="10" fill="#f4f5f6" stroke="#d6d8da"/>
+  <text x="120" y="368" font-size="15" fill="#444">OpenAI Responses</text>
+  <rect x="100" y="400" width="180" height="44" rx="10" fill="#f4f5f6" stroke="#d6d8da"/>
+  <text x="120" y="428" font-size="15" fill="#444">Anthropic Messages</text>
+
+  <path d="M330 325 H420" stroke="#7f9b99" stroke-width="2" fill="none"/>
+  <path d="M408 317 L420 325 L408 333" stroke="#7f9b99" stroke-width="2" fill="none"/>
+
+  <rect x="430" y="170" width="340" height="310" rx="28" fill="#fff" stroke="#9ca5aa" stroke-width="1.8"/>
+  <text x="470" y="218" font-size="21" font-weight="700" fill="#222">Switchyard</text>
+  <rect x="470" y="252" width="260" height="54" rx="12" fill="#f4f5f6" stroke="#d2d5d7"/>
+  <text x="495" y="284" font-size="16" fill="#333">协议解码 / 格式翻译</text>
+  <rect x="470" y="324" width="260" height="54" rx="12" fill="#f6f7f7" stroke="#7f9b99" stroke-width="1.5"/>
+  <text x="495" y="356" font-size="16" fill="#333">路由算法：挑模型</text>
+  <rect x="470" y="396" width="260" height="54" rx="12" fill="#f4f5f6" stroke="#d2d5d7"/>
+  <text x="495" y="428" font-size="16" fill="#333">指标 / 重试 / 回退</text>
+
+  <path d="M790 270 H865" stroke="#7f9b99" stroke-width="2" fill="none"/>
+  <path d="M853 262 L865 270 L853 278" stroke="#7f9b99" stroke-width="2" fill="none"/>
+  <path d="M790 390 H865" stroke="#7f9b99" stroke-width="2" fill="none"/>
+  <path d="M853 382 L865 390 L853 398" stroke="#7f9b99" stroke-width="2" fill="none"/>
+
+  <rect x="880" y="190" width="250" height="120" rx="18" fill="#fff" stroke="#bfc3c7" stroke-width="1.5"/>
+  <text x="910" y="232" font-size="17" font-weight="700" fill="#2a2a2a">高能力模型</text>
+  <text x="910" y="265" font-size="14" fill="#666">复杂推理 / 错误恢复</text>
+  <rect x="880" y="350" width="250" height="120" rx="18" fill="#fff" stroke="#bfc3c7" stroke-width="1.5"/>
+  <text x="910" y="392" font-size="17" font-weight="700" fill="#2a2a2a">高效率模型</text>
+  <text x="910" y="425" font-size="14" fill="#666">机械执行 / 稳定阶段</text>
+
+  <text x="70" y="585" font-size="17" font-weight="700" fill="#333">关键点</text>
+  <text x="70" y="620" font-size="15" fill="#555">客户端继续说原来的 API；后端可以换成 OpenAI-Compatible、NIM、vLLM、Ollama 等。</text>
+  <text x="70" y="650" font-size="15" fill="#555">路由层承担翻译、模型选择、回退和指标记录，应用侧不需要为每家模型重写调用逻辑。</text>
+</g>
+</svg>
